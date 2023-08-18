@@ -96,6 +96,9 @@
 
 .header-navbar--connect {
   margin-right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-navbar--connect:hover {
@@ -265,7 +268,7 @@
   align-items: center;
 }
 
-.suggested-item {
+.header-suggested-item {
   font-size: 1.2rem;
   color: var(--white-color);
 }
@@ -349,11 +352,137 @@
   font-size: 1.2rem;
 }
 
+.main-section-wrapper {
+  padding-top: 40px;
+  background-color: #f3f3f3;
+}
+
+/* category menu */
+
+.category--header {
+  height: 50px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: rgba(0,0,0,.8);
+  line-height: 3.125rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+}
+
+.category--header-icon {
+  font-size: 1.3rem;
+  margin-right: 0.625rem;
+}
+
+.link-item {
+  color: rgba(0,0,0,.87);
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.shop-goods-wrapper {
+  grid-column-end: 7;
+  grid-column-start: 2;
+  display: grid;
+}
+
+.filter-goods {
+  height: 60px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,.03);
+  padding: 13px 20px;
+}
+
+.sort-by-options {
+  display: flex;
+  justify-content: flex-start;
+  flex:1;
+}
+
+.sort-option-btn {
+  height: 34px;
+  min-width: 80px;
+  border-radius: 2px;
+  margin-left: 10px;
+  padding: 0 12px;
+  background-color: var(--white-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sort-by-options .select-input {
+  justify-content: space-between;
+  width: 200px;
+}
+
+.controller-navigation {
+  width: 36px;
+  height: 100%;
+  padding: 1px 6px;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mini-page-controller--state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.mini-page-controller--prev {
+  margin-left: 20px;
+}
+
+.mini-page-controller--next {
+  margin-left: 1px;
+}
+/* pagination */
+.pagination-list {
+  padding-top: 48px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.pagination-item {
+  --height: 30px;
+  min-width: 40px;
+  font-size: 1.9rem;
+  margin: 0 15px;
+  border-radius: 2px;
+  color: var(--text-color);
+  height: var(--height);
+  line-height: var(--height);
+  text-align: center;
+}
+
+.pagination-btn--right {
+  margin-left: 15px;
+  text-align: right;
+}
+
+.pagination-btn--left {
+  margin-right: 15px;
+  text-align: left;
+}
+/* footer */
 .footer-wrapper {
-  /* temp */
-  margin-top: 10px; 
-  border-top: 2px solid var(--primary-color);
-  background: #f5f5f5;
+  border-top: 4px solid var(--primary-color);
+  background: #fff;
 }
 
 .footer-space {

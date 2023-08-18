@@ -15,6 +15,7 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
@@ -30,16 +31,11 @@ a {
   text-decoration: none;
 }
 
-p {
-  margin: 0;
-}
-
 ul {
-  margin: 0;
   padding: 0;
 }
 
-.button {
+button {
   border: none;
   padding: 0;
 }
@@ -63,15 +59,16 @@ input {
   justify-content: center;
 }
 
+.fa-star {
+  color: #c4c4c4;
+}
+.fa-star.full {
+  color: yellow;
+}
+
 .wrapper {
   width: var(--default-layout-width);
   margin: 0 auto;
-}
-
-.flex-display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .dropdown-menu::before {
@@ -150,7 +147,13 @@ input {
 
 .grid--col-5 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.grid--col-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 10px;
 }
 
@@ -162,4 +165,82 @@ input {
 
 .footer-content--item:hover {
   color: var(--primary-color);
+}
+
+.view-all--text, .view-all--icon {
+  color: #ee4d2d;
+  text-transform: capitalize;
+}
+
+.shop-collection-wrapper {
+  margin-bottom: 30px;
+}
+
+.shop-collection--header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-collection--header--left {
+  flex: 1;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.54);
+  font-weight: 500;
+}
+
+.shop-collection--header--right {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.goods-item {
+  position: relative;
+  background-color: white;
+  margin-top: 10px;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.goods-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.0625rem 20px 0 rgba(0,0,0,.05);
+}
+
+.goods-item--img img {
+  width: 100%;
+
+}
+
+.goods-item--info {
+  display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.goods-item--title {
+  font-size: 1.3rem;
+}
+
+.goods-item--price {
+  color: rgb(247 53 53);
+  font-size: 1.5rem;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.goods-item--rating-sold {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goods-item--rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
