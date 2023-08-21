@@ -147,13 +147,13 @@ input {
 
 .grid--col-5 {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(100px,1fr));
   gap: 10px;
 }
 
 .grid--col-6 {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(100px,1fr));
   gap: 10px;
 }
 
@@ -213,7 +213,8 @@ input {
 
 .goods-item--img img {
   width: 100%;
-
+  height: 190px;
+  object-fit: contain;
 }
 
 .goods-item--info {
@@ -224,6 +225,10 @@ input {
 
 .goods-item--title {
   font-size: 1.3rem;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .goods-item--price {
@@ -243,4 +248,57 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.dropdown-list {
+  position: relative;
+}
+
+.dropdown-list:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-options,
+.dropdown-focus-options {
+  display: none;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2);
+  font-size: 1.5rem;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  z-index: 100;
+}
+
+.dropdown-options::before {
+  content: "";
+  width: 100%;
+  height: 18px;
+  display: block;
+  position: absolute;
+  top: -10px;
+}
+
+.dropdown-option {
+  padding: 8px;
+}
+
+.dropdown-option:last-child,
+.dropdown-option:first-child{
+  border-radius: inherit;
+}
+
+.dropdown-option:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-focus-options {
+  top: calc(100% + 5px);
+  left: -3px;
+}
+
+.dropdown-focus-list:focus + .dropdown-focus-options{
+  display: block;
 }

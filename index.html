@@ -201,15 +201,23 @@
 
           <div class="header-search-section">
             <div class="header-searchbar-wrapper">
-              <div class="header-searchbar-container">
+              <div class="dropdown-list header-searchbar-container">
                 <input
-                  class="header-searchbar--input"
+                  class="header-searchbar--input dropdown-focus-list"
                   placeholder="Nhập thông tin tìm kiếm"
                 />
+                <div id="search-result" class="dropdown-focus-options">
+                </div>
               </div>
-              <div class="header-searchbar--options">
-                <span class="search-option-current">Trong shop</span>
-                <i class="search-option-icon fa-solid fa-chevron-down"></i>
+              <div class="dropdown-list header-searchbar--options">
+                <div class="search-current-option-wrapper">
+                  <span class="search-current-option">Trong Shop</span>
+                  <i class="search-option-icon fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-options">
+                  <div class="dropdown-option">Trong Shop</div>
+                  <div class="dropdown-option">Trong Shopee</div>
+                </div>
               </div>
               <div class="header-searchbar--btn">
                 <button class="header-search-btn">
@@ -299,35 +307,14 @@
             <div class="shop-collection--header">
               <span class="shop-collection--header--left">Gợi ý cho bạn</span>
               <div class="shop-collection--header--right">
-                <a class="view-all--text">Xem tất cả</a>
+                <a href="#shop-goods-list" class="view-all--text">Xem tất cả</a>
                 &nbsp;
                 <i class="view-all--icon fa-solid fa-chevron-right"></i>
               </div>
             </div>
-            <div class="grid--col-6 goods-list">
-              <div class="goods-item">
-                <div class="goods-item--img">
-                  <img src="./assets/images/thumbnail__product.jfif" alt="" />
-                </div>
-                <div class="goods-item--info">
-                  <div class="goods-item--title">
-                    Bộ 6 tượng chú mèo hoạt hình đáng yêu trang trí tiểu cảnh
-                  </div>
-                  <div class="goods-item--price">đ38.340</div>
-                  <div class="goods-item--rating-sold">
-                    <div class="goods-item--rating">
-                      <i class="fa-solid fa-star full"></i>
-                      <i class="fa-solid fa-star full"></i>
-                      <i class="fa-solid fa-star full"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="goods-item--sold">Đã bán 137</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div id="suggested-list" class="grid--col-6 goods-list"></div>
           </div>
+          
 
           <div class="shop-collection-wrapper">
             <div class="shop-collection--header">
@@ -335,35 +322,13 @@
                 >Sản phẩm bán chạy</span
               >
               <div class="shop-collection--header--right">
-                <a class="view-all--text">Xem tất cả</a>
+                <a href="#shop-goods-list" class="view-all--text">Xem tất cả</a>
                 &nbsp;
                 <i class="view-all--icon fa-solid fa-chevron-right"></i>
               </div>
             </div>
-            <div class="grid--col-6 goods-list">
-              <div class="goods-item">
-                <div class="goods-item--img">
-                  <img src="./assets/images/thumbnail__product.jfif" alt="" />
-                </div>
-                <div class="goods-item--info">
-                  <div class="goods-item--title">
-                    Bộ 6 tượng chú mèo hoạt hình đáng yêu trang trí tiểu cảnh
-                  </div>
-                  <div class="goods-item--price">đ38.340</div>
-                  <div class="goods-item--rating-sold">
-                    <div class="goods-item--rating">
-                      <i class="fa-solid fa-star full"></i>
-                      <i class="fa-solid fa-star full"></i>
-                      <i class="fa-solid fa-star full"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="goods-item--sold">Đã bán 137</div>
-                  </div>
-                </div>
-              </div>
+            <div id="best-seller-list" class="grid--col-6 goods-list"></div>
             </div>
-          </div>
           <div class="grid--col-6">
             <div class="category-wrapper">
               <div class="category--header">
@@ -397,9 +362,15 @@
                   <button class="sort-option-btn">Phổ biến</button>
                   <button class="sort-option-btn">Mới nhất</button>
                   <button class="sort-option-btn">Bán chạy</button>
-                  <div class="select-input sort-option-btn">
-                    <span class="select-input--label">Giá </span>
-                    <i class="fa-solid fa-chevron-down"></i>
+                  <div class="dropdown-list sort-option-btn select-input">
+                    <div class="current-sort-wrapper">
+                      <span class="search-current-option">Giá </span>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-options">
+                      <div class="dropdown-option">Giá: Thấp đến Cao</div>
+                      <div class="dropdown-option">Giá: Cao đến Thấp</div>
+                    </div>
                   </div>
                 </div>
 
@@ -413,66 +384,27 @@
                   <div class="controller-navigation mini-page-controller--next"><i class="fa-solid fa-angle-right"></i></div>
               </div>
             </div>
-
-              <div class="grid--col-5">
-                <div class="goods-item">
-                  <div class="goods-item--img">
-                    <img src="./assets/images/thumbnail__product.jfif" alt="" />
-                  </div>
-                  <div class="goods-item--info">
-                    <div class="goods-item--title">
-                      Bộ 6 tượng chú mèo hoạt hình đáng yêu trang trí tiểu cảnh
-                    </div>
-                    <div class="goods-item--price">đ38.340</div>
-                    <div class="goods-item--rating-sold">
-                      <div class="goods-item--rating">
-                        <i class="fa-solid fa-star full"></i>
-                        <i class="fa-solid fa-star full"></i>
-                        <i class="fa-solid fa-star full"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                      <div class="goods-item--sold">Đã bán 137</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
+              <div id="shop-goods-list" class="grid--col-5"></div>
             </div>
           </div>
         </div>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-btn--right">
-            <a href="" class="pagination__link">
-              <i class="fa-solid fa-angle-left"></i>
-            </a>
-          </li>
-          <li
-            class="pagination-item pagination__item--active pagination__btn--num"
-          >
-            <a href="" class="pagination-link">1 </a>
-          </li>
-          <li class="pagination-item pagination__btn--num">
-            <a href="" class="pagination__link">2 </a>
-          </li>
-          <li class="pagination-item pagination__btn--num">
-            <a href="" class="pagination__link">3 </a>
-          </li>
-          <li class="pagination-item pagination__btn--num">
-            <a href="" class="pagination__link">4 </a>
-          </li>
-          <li class="pagination-item pagination__btn--num">
-            <a href="" class="pagination__link">5 </a>
-          </li>
-          <li class="pagination-item pagination__btn--num">
-            <a href="" class="pagination__link">... </a>
-          </li>
-          <li class="pagination-item pagination__btn--num">
-            <a href="" class="pagination__link">14 </a>
-          </li>
           <li class="pagination-item pagination-btn--left">
-            <a href="" class="pagination__link">
+            <div class="pagination__link">
+              <i class="fa-solid fa-angle-left"></i>
+            </div>
+          </li>
+          <div id="pagination-wrapper" class="pagination-wrapper"></div>
+          <!-- <li
+            class="pagination-item pagination-item--active pagination__btn--num"
+          >
+            <div class="pagination-link">1</div>
+          </li> -->
+          <li class="pagination-item pagination-btn--right">
+            <div class="pagination__link">
               <i class="fa-solid fa-angle-right"></i>
-            </a>
+            </div>
           </li>
         </ul>
       </div>
@@ -842,6 +774,7 @@
         </div>
       </footer>
     </div>
-    <script src="./assets/js/"></script>
+    <script type="module" src="./assets/js/renderLoadedData.js"></script>
+    <script type="module" src="./assets/js/listenEvent.js"></script>
   </body>
 </html>
