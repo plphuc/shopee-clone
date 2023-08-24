@@ -8,7 +8,11 @@ const seeAllElements = document.querySelectorAll(
 const dropdownElements = document.querySelectorAll('.dropdown-list');
 const inputSearchElement = document.querySelector('.header-searchbar--input')
 const resultSearchContainerElement = document.querySelector('#search-result')
-const paginationElements = document.querySelectorAll('.pagination-item')
+const headerTabElements = document.querySelectorAll('.header-tab-item')
+const headerTabUnderlineElement = document.querySelector('.header-tabs-underline')
+
+headerTabUnderlineElement.style.width = headerTabElements[0].clientWidth + 'px'
+headerTabUnderlineElement.style.left = headerTabElements[0].offsetLeft + 'px'
 
 export function paginationEvents() {
   const paginationElements = document.querySelectorAll('.pagination-btn--num')
@@ -56,8 +60,10 @@ inputSearchElement.addEventListener('input', () => {
   utilsFunc.debouncedFunc(() => getSearchResult(inputSearchElement.value), 500)()
 })
 
-paginationElements.forEach((paginationElement, idx) => {
-  paginationElement.addEventListener('click', () => {
-    console.log(idx);
+headerTabElements.forEach((headerTabElement) => {
+  headerTabElement.addEventListener('click', (e) => {
+    headerTabUnderlineElement.style.left = e.target.offsetLeft + 'px'
+    headerTabUnderlineElement.style.width = e.target.clientWidth + 'px'
   })
+  
 })
