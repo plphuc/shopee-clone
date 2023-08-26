@@ -4,6 +4,7 @@ import * as handleEventFunc from './listenEvent.js';
 let products;
 let suggestedProducts;
 let bestSellerProducts;
+let categories;
 
 function loadDataToElement(productsList) {
   return productsList.map((product) => {
@@ -69,10 +70,20 @@ export const renderPage = async function (pageIndex) {
   loadData('#shop-goods-list', products.products);
 };
 
+export const renderCategoryPage = function () {
+  return categories.map((category) => {
+    return `
+    <div class='category-item'>${category}</div>`
+  })
+}
+
 const renderData = async () => {
   bestSellerProducts = await getRequest.getBestSellerProducts({ page: 1 });
   products = await getRequest.getProducts({ page: 1 });
   suggestedProducts = await getRequest.getSuggestedProducts({ page: 1 });
+  categories = Array.from(new Set(products.products.map((product) => {
+    return product.category
+  })))
 
   loadData('#shop-goods-list', products.products);
   loadData('#suggested-list', suggestedProducts.suggested);

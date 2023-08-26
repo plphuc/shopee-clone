@@ -301,70 +301,71 @@
             </div>
           </div>
         </header>
-        <header class="container ms-header-wrapper">
-          <div class="header-background">
-            <div class="search-section-wrapper">
-              <div class="back-icon-container">
-                <i class="fa-solid fa-arrow-left"></i>
-              </div>
-              <div class="searchbar-container">
-                <div class="search-icon-container">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <input placeholder="HAPPI - Thế Giới VPP" />
-              </div>
+      </div>
+      <div class="search-section-wrapper container">
+        <div class="back-icon-container">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="searchbar-container">
+          <div class="search-icon-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input placeholder="HAPPI - Thế Giới VPP" />
+        </div>
+      </div>
+
+      <header class="container ms-header-wrapper">
+        <div class="header-background"></div>
+        <div class="shop-info-section-wrapper">
+          <div class="shop--avt-container">
+            <img
+              src="https://down-ws-vn.img.susercontent.com/1b955b062c82401cc1582a1f8f551717_tn.webp"
+              alt="shop-avt"
+            />
+            <div class="shop--badge">
+              <span class="portrait-badge--content-text">Yêu thích+</span>
             </div>
-            <div class="shop-info-section-wrapper">
-              <div class="shop--avt-container">
-                <img
-                  src="https://down-ws-vn.img.susercontent.com/1b955b062c82401cc1582a1f8f551717_tn.webp"
-                  alt="shop-avt"
-                />
-                <div class="shop--badge">
-                  <span class="portrait-badge--content-text">Yêu thích+</span>
-                </div>
+          </div>
+          <div class="shop--overall-container">
+            <div class="shop--name">
+              <h1>HAPPI - Thế Giới VPP ></h1>
+            </div>
+            <div class="shop--status">Online 6 phút trước</div>
+            <div class="shop--details">
+              <div class="shop--rating">
+                <span><i class="fa-solid fa-star rating-icon"></i></span>
+                <span>4.8/5.0</span>
               </div>
-              <div class="shop--overall-container">
-                <div class="shop--name">
-                  <h1>HAPPI - Thế Giới VPP ></h1>
-                </div>
-                <div class="shop--status">Online 6 phút trước</div>
-                <div class="shop--details">
-                  <div class="shop--rating">
-                    <span><i class="fa-solid fa-star rating-icon"></i></span>
-                    <span>4.8/5.0</span>
-                  </div>
-                  <div class="vertical-separator"></div>
-                  <div class="shop--followers">
-                    <span class="followers-numb">7,2k</span>
-                    <span class="followers-text">Người theo dõi</span>
-                  </div>
-                </div>
-              </div>
-              <div class="shop--actions-btn-container">
-                <button class="shop-action-btn">
-                  <span class="action-btn--icon"
-                    ><i class="fa-solid fa-plus"></i>&nbsp;</span
-                  >
-                  <span class="action-btn--text">Theo dõi</span>
-                </button>
-                <button class="shop-action-btn">
-                  <span class="action-btn--icon">
-                    <i class="fa-solid fa-comment-dots"></i>
-                    &nbsp;
-                  </span>
-                  <span class="action-btn--text">Chat</span>
-                </button>
+              <div class="vertical-separator"></div>
+              <div class="shop--followers">
+                <span class="followers-numb">7,2k</span>
+                <span class="followers-text">Người theo dõi</span>
               </div>
             </div>
           </div>
-          <div class="header-tabs">
-            <div class="header-tab-item">shop</div>
-            <div class="header-tab-item">sản phẩm</div>
-            <div class="header-tab-item">danh mục</div>
-            <div class="header-tabs-underline"></div>
+          <div class="shop--actions-btn-container">
+            <button class="shop-action-btn">
+              <span class="action-btn--icon"
+                ><i class="fa-solid fa-plus"></i>&nbsp;</span
+              >
+              <span class="action-btn--text">Theo dõi</span>
+            </button>
+            <button class="shop-action-btn">
+              <span class="action-btn--icon">
+                <i class="fa-solid fa-comment-dots"></i>
+                &nbsp;
+              </span>
+              <span class="action-btn--text">Chat</span>
+            </button>
           </div>
-        </header>
+        </div>
+      </header>
+
+      <div class="header-tabs container">
+        <div class="header-tab-item">shop</div>
+        <div class="header-tab-item">sản phẩm</div>
+        <div class="header-tab-item">danh mục</div>
+        <div class="header-tabs-underline"></div>
       </div>
 
       <div class="main-section-wrapper">
@@ -500,7 +501,7 @@
               <div id="best-seller-list" class="l-6 m-3 s-2 goods-list"></div>
             </div>
             <div class="l-6 m-3 s-2">
-              <div class="category-wrapper">
+              <div class="l-category-wrapper">
                 <div class="category--header">
                   <i class="category--header-icon fa-solid fa-bars"></i>
                   <h3 class="category--header-title">Danh mục</h3>
@@ -524,6 +525,7 @@
                   </li>
                 </ul>
               </div>
+              <div class="ms-category-wrapper"></div>
               <div class="shop-goods-wrapper">
                 <div class="l-filter-goods">
                   <span class="filter--label">Sắp xếp theo</span>
@@ -566,7 +568,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="ms-filter-goods">
+                <div id="shop-goods-title" class="ms-shop-goods-title">
+                  <span class="shop-goods-text">Sản phẩm trong shop</span>
+                </div>
+                <div class="m-filter-goods">
                   <span class="filter--label">Sắp xếp theo</span>
 
                   <div class="sort-by-options">
@@ -607,14 +612,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="shop-goods-title">
-                  <span class="shop-goods-text">Sản phẩm trong shop</span>
-                </div>
                 <div id="shop-goods-list" class="l-5 m-3 s-2"></div>
               </div>
             </div>
           </div>
         </div>
+
         <ul class="pagination-list">
           <li class="pagination-item pagination-btn--left">
             <div class="pagination__link">
@@ -628,6 +631,8 @@
             </div>
           </li>
         </ul>
+
+        <div class="category-container container"></div>
       </div>
 
       <footer class="footer-wrapper">
